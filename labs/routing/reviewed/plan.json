@@ -1,0 +1,96 @@
+{
+  "device_aliases": {
+    "ISP": "ISP",
+    "R1": "Router1",
+    "R2": "Router2",
+    "MLS": "Multilayer Switch0",
+    "SW1": "Switch1"
+  },
+  "transits": [
+    {
+      "a": [
+        "R1",
+        "GigabitEthernet0/0",
+        "10.1.1.2/30"
+      ],
+      "b": [
+        "MLS",
+        "GigabitEthernet1/0/24",
+        "10.1.1.1/30"
+      ]
+    },
+    {
+      "a": [
+        "R1",
+        "Serial0/0/0",
+        "10.1.1.5/30"
+      ],
+      "b": [
+        "R2",
+        "Serial0/1/0",
+        "10.1.1.6/30"
+      ]
+    },
+    {
+      "a": [
+        "R1",
+        "Serial0/0/1",
+        "203.0.113.2/30"
+      ],
+      "b": [
+        "ISP",
+        "Serial0/0/1",
+        "203.0.113.1/30"
+      ]
+    }
+  ],
+  "hosts": [
+    {
+      "name": "PC0",
+      "ip": "172.16.30.10/24",
+      "gateway": "172.16.30.254",
+      "gateway_device": "R2",
+      "gateway_interface": "GigabitEthernet0/1.30",
+      "switch": "SW1",
+      "port": "FastEthernet0/1",
+      "vlan": 30
+    },
+    {
+      "name": "PC1",
+      "ip": "172.16.40.10/24",
+      "gateway": "172.16.40.254",
+      "gateway_device": "R2",
+      "gateway_interface": "GigabitEthernet0/1.40",
+      "switch": "SW1",
+      "port": "FastEthernet0/2",
+      "vlan": 40
+    },
+    {
+      "name": "PC2",
+      "ip": "172.16.10.10/24",
+      "gateway": "172.16.10.254",
+      "gateway_device": "MLS",
+      "gateway_interface": "Vlan10",
+      "switch": "MLS",
+      "port": "GigabitEthernet1/0/1",
+      "vlan": 10
+    },
+    {
+      "name": "PC3",
+      "ip": "172.16.20.10/24",
+      "gateway": "172.16.20.254",
+      "gateway_device": "MLS",
+      "gateway_interface": "Vlan20",
+      "switch": "MLS",
+      "port": "GigabitEthernet1/0/2",
+      "vlan": 20
+    },
+    {
+      "name": "Server0",
+      "ip": "198.51.100.2/27",
+      "gateway": "198.51.100.1",
+      "gateway_device": "ISP",
+      "gateway_interface": "GigabitEthernet0/0"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "saved_version": "8.2.2.0400",
+  "native_sha256": "4fab760d8df0312ec69be3cc4f8b8000eb6429e7331988a73f78b0a87ba002df",
+  "devices": [
+    {
+      "name": "Power Distribution Device0",
+      "kind": "Power Distribution Device",
+      "model": "Power Distribution Device"
+    },
+    {
+      "name": "ISP",
+      "kind": "Router",
+      "model": "1941"
+    },
+    {
+      "name": "Router1",
+      "kind": "Router",
+      "model": "1941"
+    },
+    {
+      "name": "Switch1",
+      "kind": "Switch",
+      "model": "2960-24TT"
+    },
+    {
+      "name": "Server0",
+      "kind": "Server",
+      "model": "Server-PT"
+    },
+    {
+      "name": "PC0",
+      "kind": "Pc",
+      "model": "PC-PT"
+    },
+    {
+      "name": "PC1",
+      "kind": "Pc",
+      "model": "PC-PT"
+    },
+    {
+      "name": "PC2",
+      "kind": "Pc",
+      "model": "PC-PT"
+    },
+    {
+      "name": "PC3",
+      "kind": "Pc",
+      "model": "PC-PT"
+    },
+    {
+      "name": "Multilayer Switch0",
+      "kind": "MultiLayerSwitch",
+      "model": "3650-24PS"
+    },
+    {
+      "name": "Router2",
+      "kind": "Router",
+      "model": "1941"
+    }
+  ],
+  "links": [
+    {
+      "a": {
+        "device": "ISP",
+        "port": "GigabitEthernet0/0"
+      },
+      "b": {
+        "device": "Server0",
+        "port": "FastEthernet0"
+      }
+    },
+    {
+      "a": {
+        "device": "Router1",
+        "port": "Serial0/0/1"
+      },
+      "b": {
+        "device": "ISP",
+        "port": "Serial0/0/1"
+      }
+    },
+    {
+      "a": {
+        "device": "Router1",
+        "port": "Serial0/0/0"
+      },
+      "b": {
+        "device": "Router2",
+        "port": "Serial0/1/0"
+      }
+    },
+    {
+      "a": {
+        "device": "Switch1",
+        "port": "GigabitEthernet0/1"
+      },
+      "b": {
+        "device": "Router2",
+        "port": "GigabitEthernet0/1"
+      }
+    },
+    {
+      "a": {
+        "device": "PC0",
+        "port": "FastEthernet0"
+      },
+      "b": {
+        "device": "Switch1",
+        "port": "FastEthernet0/1"
+      }
+    },
+    {
+      "a": {
+        "device": "PC1",
+        "port": "FastEthernet0"
+      },
+      "b": {
+        "device": "Switch1",
+        "port": "FastEthernet0/2"
+      }
+    },
+    {
+      "a": {
+        "device": "PC3",
+        "port": "FastEthernet0"
+      },
+      "b": {
+        "device": "Multilayer Switch0",
+        "port": "GigabitEthernet1/0/2"
+      }
+    },
+    {
+      "a": {
+        "device": "Router1",
+        "port": "GigabitEthernet0/0"
+      },
+      "b": {
+        "device": "Multilayer Switch0",
+        "port": "GigabitEthernet1/0/24"
+      }
+    },
+    {
+      "a": {
+        "device": "PC2",
+        "port": "FastEthernet0"
+      },
+      "b": {
+        "device": "Multilayer Switch0",
+        "port": "GigabitEthernet1/0/1"
+      }
+    }
+  ]
+}

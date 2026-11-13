@@ -1,0 +1,9 @@
+* text=auto
+*.pkt binary
+*.png binary
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.cfg text eol=lf
+*.yml text eol=lf
